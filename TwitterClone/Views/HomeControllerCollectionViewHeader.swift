@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewSupplementaryHeader: UICollectionReusableView {
+class HomeControllerCollectionViewHeader: UICollectionReusableView {
     
     @IBOutlet weak var headerLabel: UILabel!
     

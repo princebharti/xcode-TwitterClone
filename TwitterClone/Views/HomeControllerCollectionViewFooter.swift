@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewSupplimentaryFooter: UICollectionReusableView {
+class HomeControllerCollectionViewFooter: UICollectionReusableView {
     
     
     @IBOutlet private var footerLabel: UILabel!
