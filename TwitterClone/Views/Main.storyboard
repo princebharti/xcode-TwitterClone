@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -36,7 +35,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jtO-zr-gS9">
                                             <rect key="frame" x="8" y="8" width="355" height="133"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prince Bharti" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-2X-Wqk" customClass="UIImageViewX" customModule="TwitterClone" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Prince Bharti" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-2X-Wqk" customClass="UIImageViewX" customModule="TwitterClone" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -45,7 +44,7 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="6"/>
+                                                            <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -58,13 +57,13 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MDh-bH-geJ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="169" height="36.5"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mbv-wm-Qoh">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mbv-wm-Qoh">
                                                                             <rect key="frame" x="0.0" y="0.0" width="169" height="19.5"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zQS-Th-rYg">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zQS-Th-rYg">
                                                                             <rect key="frame" x="0.0" y="19.5" width="169" height="17"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                             <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -134,7 +133,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G5e-VF-fpR">
                                             <rect key="frame" x="8" y="8" width="357" height="101"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Prince Bharti" translatesAutoresizingMaskIntoConstraints="NO" id="wIp-97-Oqi" customClass="UIImageViewX" customModule="TwitterClone" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Prince Bharti" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIp-97-Oqi" customClass="UIImageViewX" customModule="TwitterClone" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="ewM-z6-JzP"/>
@@ -146,25 +145,47 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSX-tH-Zdb">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PeM-PS-0pw">
                                                     <rect key="frame" x="58" y="0.0" width="299" height="101"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uuj-tx-cff">
-                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="101"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="77"/>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y9y-am-gL9">
+                                                            <rect key="frame" x="0.0" y="77" width="249" height="24"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLq-C0-5E6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                    <state key="normal" image="reply"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taH-B2-qFC">
+                                                                    <rect key="frame" x="76" y="1" width="21" height="22"/>
+                                                                    <state key="normal" image="send_message"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXA-Rx-hcs">
+                                                                    <rect key="frame" x="149" y="0.0" width="27" height="24"/>
+                                                                    <state key="normal" image="retweet"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szs-e3-9ac">
+                                                                    <rect key="frame" x="228" y="1" width="21" height="22"/>
+                                                                    <state key="normal" image="like"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="Uuj-tx-cff" secondAttribute="trailing" id="55U-f1-2Yx"/>
-                                                        <constraint firstItem="Uuj-tx-cff" firstAttribute="leading" secondItem="SSX-tH-Zdb" secondAttribute="leading" id="AQt-tF-MIW"/>
-                                                        <constraint firstItem="Uuj-tx-cff" firstAttribute="top" secondItem="SSX-tH-Zdb" secondAttribute="top" id="Go6-xZ-WEb"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Uuj-tx-cff" secondAttribute="bottom" id="PGo-X1-hey"/>
+                                                        <constraint firstItem="Uuj-tx-cff" firstAttribute="leading" secondItem="PeM-PS-0pw" secondAttribute="leading" id="IZn-Y2-k05"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Y9y-am-gL9" secondAttribute="bottom" id="TnE-lF-7pD"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Uuj-tx-cff" secondAttribute="trailing" id="ekV-Td-JQC"/>
+                                                        <constraint firstItem="Uuj-tx-cff" firstAttribute="top" secondItem="PeM-PS-0pw" secondAttribute="top" id="gTc-um-8Ge"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Y9y-am-gL9" secondAttribute="trailing" constant="50" id="ipQ-Mj-gDW"/>
+                                                        <constraint firstItem="Y9y-am-gL9" firstAttribute="top" secondItem="Uuj-tx-cff" secondAttribute="bottom" id="mn5-MF-AXA"/>
+                                                        <constraint firstItem="Y9y-am-gL9" firstAttribute="leading" secondItem="PeM-PS-0pw" secondAttribute="leading" id="rtf-fO-RTJ"/>
                                                     </constraints>
-                                                </view>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhE-iv-sfT" userLabel="Seperator Line">
@@ -303,6 +324,10 @@
         <image name="Prince Bharti" width="200" height="200"/>
         <image name="TwitterFollow" width="31" height="22"/>
         <image name="TwitterFollowButton" width="25" height="25"/>
+        <image name="like" width="21" height="21"/>
+        <image name="reply" width="24" height="24"/>
+        <image name="retweet" width="27" height="27"/>
+        <image name="send_message" width="21" height="21"/>
         <image name="twitter compose" width="24" height="26"/>
         <image name="twitter logo" width="12" height="12"/>
         <image name="twitter search" width="24" height="24"/>

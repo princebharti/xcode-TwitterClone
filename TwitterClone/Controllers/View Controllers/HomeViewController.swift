@@ -9,25 +9,35 @@
 import UIKit
 class HomeViewController: UICollectionViewController {
     
+    
+    
     let modelController = HomeModelController()
     var users: [User] = []
     var tweets: [Tweet] = []
-    
+    //MARK: view controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         users = modelController.getUsers()
         tweets = modelController.getTweets()
-        collectionViewFlowLayoutSetup()
+        collectionViewFlowLayoutSetup(with: (collectionView?.frame.size.width)!)
         navigationbarSetup()
         
         
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionViewFlowLayoutSetup(with: view.bounds.size.width)
+        collectionView?.collectionViewLayout.invalidateLayout()
+        collectionViewFlowLayoutSetup(with: size.width)
+    }
+    
     //MARK: Custome setup
     
-    fileprivate func collectionViewFlowLayoutSetup(){
+    
+    fileprivate func collectionViewFlowLayoutSetup(with Width: CGFloat){
         
         if let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: (collectionView?.bounds.width)!, height: 300.0)
+            flowLayout.estimatedItemSize = CGSize(width: Width, height: 300)
         }
         
     }
@@ -113,8 +123,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         
         return sectionInset
     }
-    
-    
+
     
 }
 
