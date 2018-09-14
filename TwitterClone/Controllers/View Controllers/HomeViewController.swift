@@ -11,8 +11,10 @@ import SVProgressHUD
 class HomeViewController: UICollectionViewController {
     
     
-    var users: [User] = []
-    var tweets: [Tweet] = []
+    private  var users: [User] = []
+    private var tweets: [Tweet] = []
+    private let refreshControl = UIRefreshControl()
+    
     
     
     
@@ -22,22 +24,55 @@ class HomeViewController: UICollectionViewController {
         collectionViewFlowLayoutSetup(with: (collectionView?.frame.size.width)!)
         navigationbarSetup()
         loadHomeData()
+        addRefreshControl()
+    
+        
     }
     
+    fileprivate func addRefreshControl(){
+        refreshControl.addTarget(self, action: #selector(refresher), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
+    }
+    
+    @objc  fileprivate func refresher(){
+        loadHomeData()
+    }
+    
+    fileprivate func errorController(){
+        let errorController = UIAlertController(title: "Error", message: "Something went wrong please try again ", preferredStyle: .alert)
+        let okAlert = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.loadHomeData()
+        }
+        errorController.addAction(okAlert)
+        present(errorController, animated: true, completion: nil)
+    }
     
     fileprivate func loadHomeData(){
         NetworkClient.shared.loadHomeData { (home) in
             DispatchQueue.main.async {
-                guard let users = home?.users else { return }
-                guard let tweets = home?.tweets else { return }
-
+                guard let home = home else {
+                    SVProgressHUD.dismiss()
+                    self.errorController()
+                    return
+                }
+                
+                guard let users = home.users else { return }
+                guard let tweets = home.tweets else { return }
+                
                 self.users = users
                 self.tweets = tweets
                 self.collectionView?.reloadData()
                 SVProgressHUD.dismiss()
+                self.refreshControl.endRefreshing()
+                
+                
             }
         }
-        SVProgressHUD.show()
+        
+        if !refreshControl.isRefreshing {
+            SVProgressHUD.show()
+        }
+        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

@@ -20,13 +20,13 @@
                         <color key="backgroundColor" red="0.90980392156862744" green="0.92549019607843142" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Vyf-mL-2pq">
                             <size key="itemSize" width="371" height="150"/>
-                            <size key="headerReferenceSize" width="40" height="40"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="40" height="40"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCell" id="0wA-wH-EU8" customClass="HomeControllerCollectionViewUserCell" customModule="TwitterClone" customModuleProvider="target">
-                                <rect key="frame" x="2" y="40" width="371" height="150"/>
+                                <rect key="frame" x="2" y="50" width="371" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="371" height="150"/>
@@ -124,7 +124,7 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TweetCell" id="SLJ-i7-uca" customClass="HomeControllerCollectionViewTweetCell" customModule="TwitterClone" customModuleProvider="target">
-                                <rect key="frame" x="1" y="190" width="373" height="118"/>
+                                <rect key="frame" x="1" y="200" width="373" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="373" height="118"/>
@@ -216,11 +216,11 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionViewSupplementaryHeader" id="r9i-JU-rDX" customClass="HomeControllerCollectionViewHeader" customModule="TwitterClone" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHO TO FOLLOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGv-vf-Vr0">
-                                    <rect key="frame" x="12" y="10.5" width="133.5" height="19.5"/>
+                                    <rect key="frame" x="12" y="15.5" width="133.5" height="19.5"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="19.5" id="3ZV-gh-hgM"/>
                                         <constraint firstAttribute="width" constant="133.5" id="Ylr-CZ-yyh"/>
@@ -230,7 +230,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBc-il-nzg" userLabel="Seperator Line">
-                                    <rect key="frame" x="0.0" y="39" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="49" width="375" height="1"/>
                                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="5by-f8-1kB"/>
@@ -250,7 +250,7 @@
                             </connections>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionViewSupplementaryFooter" id="O58-B6-vYq" customClass="HomeControllerCollectionViewFooter" customModule="TwitterClone" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="308" width="375" height="40"/>
+                            <rect key="frame" x="0.0" y="318" width="375" height="40"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCI-Yc-MBo">

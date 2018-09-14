@@ -35,7 +35,7 @@ class NetworkClient {
                     return
                     
                 }
-                print("reading data ")
+                //print("reading data ")
       
                 let decoder = JSONDecoder()
                 do {
