@@ -7,22 +7,39 @@
 //
 
 import UIKit
+import SVProgressHUD
 class HomeViewController: UICollectionViewController {
     
     
-    
     let modelController = HomeModelController()
+    let networkController = NetworkController()
     var users: [User] = []
     var tweets: [Tweet] = []
+    
+    
+    
     //MARK: view controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        users = modelController.getUsers()
-        tweets = modelController.getTweets()
         collectionViewFlowLayoutSetup(with: (collectionView?.frame.size.width)!)
         navigationbarSetup()
-        
-        
+        loadHomeData()
+    }
+    
+    
+    fileprivate func loadHomeData(){
+        networkController.loadHomeData { (home) in
+            DispatchQueue.main.async {
+                guard let users = home?.users else { return }
+                guard let tweets = home?.tweets else { return }
+
+                self.users = users
+                self.tweets = tweets
+                self.collectionView?.reloadData()
+                SVProgressHUD.dismiss()
+            }
+        }
+        SVProgressHUD.show()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -123,7 +140,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         
         return sectionInset
     }
-
+    
     
 }
 

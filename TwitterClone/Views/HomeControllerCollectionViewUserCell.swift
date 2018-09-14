@@ -20,9 +20,9 @@ class HomeControllerCollectionViewUserCell: UICollectionViewCell {
     var user: User? {
         didSet{
             if let user = user {
-                profilePicture.image = UIImage(named: user.profileImage) ?? UIImage(named: "profilePicurePlaceholder")
+                profilePicture.url = user.profileImage
                 nameLabel.text = user.name
-                userNameLable.text = "@\(user.userName)"
+                userNameLable.text = "\(user.userName)"
                 bioTextView.text = user.bio
            }
         }

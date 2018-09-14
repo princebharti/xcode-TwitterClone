@@ -34,12 +34,12 @@ public class HomeModelController {
     func getTweets() -> [Tweet] {
         
         var tweets: [Tweet] = []
-        
-        let tweet1 = Tweet(user: User(name: "Prince Bharti", userName: "princebharti1", bio: "Computer proogrammer , Data scientist and swimmer and what not i am coder Computer proogrammer , Data scientist and swimmer ", profileImage: "Prince Bharti"), message: "its been a great ride i am vety excited to do all the ui stuff and i am leartning throufh the heart and this is great")
-        
-        tweets.append(tweet1)
-        tweets.append(tweet1)
-        tweets.append(tweet1)
+//        
+//        let tweet1 = Tweet(user: User(name: "Prince Bharti", userName: "princebharti1", bio: "Computer proogrammer , Data scientist and swimmer and what not i am coder Computer proogrammer , Data scientist and swimmer ", profileImage: "Prince Bharti"), message: "its been a great ride i am vety excited to do all the ui stuff and i am leartning throufh the heart and this is great")
+//        
+//        tweets.append(tweet1)
+//        tweets.append(tweet1)
+//        tweets.append(tweet1)
 
      
     

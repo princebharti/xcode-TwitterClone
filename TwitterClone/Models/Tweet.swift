@@ -8,9 +8,16 @@
 
 import Foundation
 
-struct Tweet {
+struct Tweet: Decodable {
     
     var user: User?
     var message: String?
+    var tweetImage: TweetImage?
+    
+    enum codingKeys:String, CodingKey {
+        case user
+        case message
+        case tweetImage = "image"
+    }
     
 }

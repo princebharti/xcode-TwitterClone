@@ -9,7 +9,7 @@
 import Foundation
 
 
-class User {
+class User: Decodable {
     
     var name: String
     var userName: String
@@ -23,5 +23,15 @@ class User {
         self.bio = bio
         self.profileImage = profileImage
     }
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case userName = "username"
+        case bio
+        case profileImage = "profileImageUrl"
+    }
+    
+    
     
 }
