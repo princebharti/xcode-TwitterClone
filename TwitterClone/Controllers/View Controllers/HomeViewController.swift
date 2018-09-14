@@ -11,8 +11,6 @@ import SVProgressHUD
 class HomeViewController: UICollectionViewController {
     
     
-    let modelController = HomeModelController()
-    let networkController = NetworkController()
     var users: [User] = []
     var tweets: [Tweet] = []
     
@@ -28,7 +26,7 @@ class HomeViewController: UICollectionViewController {
     
     
     fileprivate func loadHomeData(){
-        networkController.loadHomeData { (home) in
+        NetworkClient.shared.loadHomeData { (home) in
             DispatchQueue.main.async {
                 guard let users = home?.users else { return }
                 guard let tweets = home?.tweets else { return }

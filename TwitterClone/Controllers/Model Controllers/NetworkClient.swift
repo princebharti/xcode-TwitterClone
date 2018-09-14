@@ -9,11 +9,11 @@
 import Foundation
 
 
-class NetworkController {
+class NetworkClient {
     
+    static let shared = NetworkClient()
     
-    
-    func loadHomeData(with completionHandler: @escaping (Home?) -> Void) {
+   func loadHomeData(with completionHandler: @escaping (Home?) -> Void) {
         
         let urlString = "https://api.letsbuildthatapp.com/twitter/home"
         let apiURL = URL(string: urlString)

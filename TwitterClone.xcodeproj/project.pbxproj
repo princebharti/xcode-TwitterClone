@@ -24,12 +24,11 @@
 		B181EEA42142F037000D24AD /* UISliderX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B181EE9A2142F037000D24AD /* UISliderX.swift */; };
 		B1AA64E82149609000B49F96 /* Int+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA64E72149609000B49F96 /* Int+StatusCode.swift */; };
 		B1B7FA2D2146B54B007D7F8B /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B7FA2C2146B54B007D7F8B /* Tweet.swift */; };
-		B1BE8F4A2140FD9B00F71D09 /* HomeModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BE8F492140FD9B00F71D09 /* HomeModelController.swift */; };
 		B1D5CBF72146AC4A0048DB20 /* HomeControllerCollectionViewTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5CBF62146AC4A0048DB20 /* HomeControllerCollectionViewTweetCell.swift */; };
 		B1DA1D02213883430027FC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1DA1D01213883430027FC28 /* Assets.xcassets */; };
 		B1E6E83D2141460500E6F957 /* HomeNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6E83C2141460500E6F957 /* HomeNavigationItem.swift */; };
 		B1E6E84221418CE400E6F957 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6E84121418CE400E6F957 /* UIColor+CustomColor.swift */; };
-		B1F34EC12149731D00216009 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F34EC02149731D00216009 /* NetworkController.swift */; };
+		B1F34EC12149731D00216009 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F34EC02149731D00216009 /* NetworkClient.swift */; };
 		B1F3EE492133032700B3CDBA /* HomeControllerCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F3EE482133032700B3CDBA /* HomeControllerCollectionViewFooter.swift */; };
 		B1F4A852213299F100F142BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4A851213299F100F142BA /* AppDelegate.swift */; };
 		B1F4A85C213299F300F142BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F4A85A213299F300F142BA /* LaunchScreen.storyboard */; };
@@ -58,12 +57,11 @@
 		B181EE9A2142F037000D24AD /* UISliderX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISliderX.swift; sourceTree = "<group>"; };
 		B1AA64E72149609000B49F96 /* Int+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+StatusCode.swift"; sourceTree = "<group>"; };
 		B1B7FA2C2146B54B007D7F8B /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
-		B1BE8F492140FD9B00F71D09 /* HomeModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelController.swift; sourceTree = "<group>"; };
 		B1D5CBF62146AC4A0048DB20 /* HomeControllerCollectionViewTweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerCollectionViewTweetCell.swift; sourceTree = "<group>"; };
 		B1DA1D01213883430027FC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1E6E83C2141460500E6F957 /* HomeNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationItem.swift; sourceTree = "<group>"; };
 		B1E6E84121418CE400E6F957 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
-		B1F34EC02149731D00216009 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		B1F34EC02149731D00216009 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		B1F3EE482133032700B3CDBA /* HomeControllerCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerCollectionViewFooter.swift; sourceTree = "<group>"; };
 		B1F4A84E213299F100F142BA /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F4A851213299F100F142BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,9 +159,8 @@
 		B1BE8F482140FBF400F71D09 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1BE8F492140FD9B00F71D09 /* HomeModelController.swift */,
 				B1AA64E72149609000B49F96 /* Int+StatusCode.swift */,
-				B1F34EC02149731D00216009 /* NetworkController.swift */,
+				B1F34EC02149731D00216009 /* NetworkClient.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -354,12 +351,11 @@
 				B1F9ED6B214AE610007291B8 /* TweetImage.swift in Sources */,
 				B136CDC52132BC2A002A720E /* User.swift in Sources */,
 				B1F4A86E21329DE400F142BA /* HomeViewController.swift in Sources */,
-				B1F34EC12149731D00216009 /* NetworkController.swift in Sources */,
+				B1F34EC12149731D00216009 /* NetworkClient.swift in Sources */,
 				B1F4A852213299F100F142BA /* AppDelegate.swift in Sources */,
 				B1E6E83D2141460500E6F957 /* HomeNavigationItem.swift in Sources */,
 				B1F3EE492133032700B3CDBA /* HomeControllerCollectionViewFooter.swift in Sources */,
 				B1F4A8732132A4D600F142BA /* HomeControllerCollectionViewUserCell.swift in Sources */,
-				B1BE8F4A2140FD9B00F71D09 /* HomeModelController.swift in Sources */,
 				B181EE9F2142F037000D24AD /* UIViewAnchorPoint.swift in Sources */,
 				B17D0CB321484209003F6B84 /* Home.swift in Sources */,
 				B181EEA22142F037000D24AD /* UIViewX.swift in Sources */,
