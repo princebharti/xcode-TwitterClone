@@ -76,7 +76,6 @@ class HomeViewController: UICollectionViewController {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        collectionViewFlowLayoutSetup(with: view.bounds.size.width)
         collectionView?.collectionViewLayout.invalidateLayout()
         collectionViewFlowLayoutSetup(with: size.width)
     }
