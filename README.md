@@ -10,4 +10,4 @@ Dispatch,SVD Progress Hud and MVC(view controller and model controller) Pattern.
 
 
 ## Finished App
-![Finished App](https://github.com/princebharti/Images/blob/master/TwitterClone.jpeg)
+<img src="https://github.com/princebharti/Images/blob/master/TwitterClone.jpeg" alt="alt text" width="9.98" height="17.85">
