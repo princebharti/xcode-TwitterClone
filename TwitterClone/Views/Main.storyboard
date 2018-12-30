@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hkX-SO-hHw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hkX-SO-hHw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -71,7 +69,7 @@
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-Wi-pBN">
+                                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-Wi-pBN" customClass="UIButtonX" customModule="TwitterClone" customModuleProvider="target">
                                                                     <rect key="frame" x="177" y="0.0" width="120" height="34"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="120" id="miG-O2-Zi7"/>
@@ -83,6 +81,17 @@
                                                                     <state key="normal" title="Follow" image="TwitterFollowButton">
                                                                         <color key="titleColor" red="0.2784313725" green="0.62745098040000002" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="2"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" red="0.35686274509803922" green="0.62352941176470589" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -322,15 +331,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Prince Bharti" width="200" height="200"/>
+        <image name="Prince Bharti" width="400" height="400"/>
         <image name="TwitterFollow" width="31" height="22"/>
         <image name="TwitterFollowButton" width="25" height="25"/>
-        <image name="like" width="21" height="21"/>
-        <image name="reply" width="24" height="24"/>
+        <image name="like" width="21.5" height="21.5"/>
+        <image name="reply" width="24.5" height="24.5"/>
         <image name="retweet" width="27" height="27"/>
-        <image name="send_message" width="21" height="21"/>
+        <image name="send_message" width="21.5" height="21.5"/>
         <image name="twitter compose" width="24" height="26"/>
-        <image name="twitter logo" width="12" height="12"/>
-        <image name="twitter search" width="24" height="24"/>
+        <image name="twitter logo" width="24" height="24"/>
+        <image name="twitter search" width="48" height="48"/>
     </resources>
 </document>
